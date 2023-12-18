@@ -1,0 +1,13 @@
+---
+import Acomodo from "../layouts/Acomodo.astro";
+import Botoncito from "../components/ButtonInscribe"
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+---
+<Acomodo tituloPage="Pagina inicial" descipcionPage="Este es el inicio de la tiernda de artesanias">
+  <h1>Pagina inicial</h1>
+  <p>bienvenido a la tienda</p>
+  <Botoncito client:visible />
+  <ToastContainer client:load/>
+
+</Acomodo>

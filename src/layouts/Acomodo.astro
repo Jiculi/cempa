@@ -1,0 +1,29 @@
+---
+interface Props {
+  tituloPage?: string
+  descipcionPage?: string
+}
+
+const {tituloPage, descipcionPage} = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={descipcionPage}>
+  <title>Astro curso | {tituloPage}</title>
+</head>
+<body>
+  
+  <slot/>
+  <style>
+    body {
+      background: #202020;
+      color: white;
+    }
+  </style>
+
+</body>
+</html>
