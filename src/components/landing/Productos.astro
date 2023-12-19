@@ -1,0 +1,16 @@
+---
+import artesanias from '../../datos/artesanias.json'
+---
+<h1 class="text-center font-bold text-5xl mt-10">Productos</h1>
+
+<div class="grid md:grid-cols-3 gap-4 p-4">
+  {
+    artesanias.map(artesania => (
+      <div class="bg-slate-800 p-10 rounded-xl">
+          <h2 class="text-2xl font-bold my-4">{artesania.nombre }</h2>
+          <p class="text-xl mt-5">{artesania.descripcion }</p>
+      </div>
+    ))
+  }
+
+</div>
