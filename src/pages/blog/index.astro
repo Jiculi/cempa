@@ -1,14 +1,16 @@
 ---
 import Acomodo from '../../layouts/Acomodo.astro';
-import imagenA from '../../imagenes/astronauta.jpg?url'
+import { Image } from 'astro:assets';
+import myImage from "../../imagenes/cimarron.webp"; 
 const posts = await Astro.glob('./posts/*.md');
 
 ---
 
+
 <Acomodo tituloPage='Blog de desarrollo' descipcionPage='Vamos a ir poniendo la estrategia y el programa'>
   <h1>blog</h1> 
+  <Image src={myImage} alt="Una descripción de mi imagen." width="300"/>
 
-  <img width="100" src={imagenA} alt="">
   
   {
     posts.map(post => {

@@ -5,8 +5,12 @@ title: "tutorial de Astro"
 
 # tutorial de Astro SSG
 
-esta madre riene componentes, prpiedades y slots
+esta madre tiene componentes, prpiedades y slots
 
-Los componentes nos permiten usar etiquetas para pasar tarjetas por ejemplo
+/components nos permiten usar etiquetas para pasar tarjetas por ejemplo
 
-las props no pemiten enviar parametros aa
+las props no pemiten enviar parametros a un  componente
+
+/pages tienen las paginas del proyecto
+/layout tienen codigo que sera reutilizado
+

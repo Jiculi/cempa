@@ -1,10 +1,13 @@
 ---
 console.log("astro proyecto")
-const title = 'Mi proyecto Cempra!!! '
+const title = 'Mi proyecto Cempa!!! '
 const color = 'warning'
 const hobbies = ['programar', 'leer', 'pintar', 'bucear']
+const isActivo = true
 ---
 <h1 class={color}>{hobbies[0]}</h1>
+<h1 class={color}>{hobbies[1]}</h1>
+<h1 class={color}>{hobbies[2]}</h1>
 <ul>
  {hobbies.map(hobby => 
   <li>
@@ -12,6 +15,8 @@ const hobbies = ['programar', 'leer', 'pintar', 'bucear']
     <button>Like</button>
   </li>)}
 </ul>
+
+<h3 class="danger">{isActivo?"esta activo":"desactivado"}</h3>
 
 <script>
   console.log("hola mundo")
