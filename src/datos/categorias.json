@@ -3,12 +3,12 @@
     {
       "nombre": "Joyeria",
       "descripcion": "Esclava gruesa en tejido barbado con ornamentos en circonia incrustada.La esclava tiene una medida de 18cm de largo",
-      "imagen": "images/cimarron.webp"
+      "imagen": "src/imagenes/cimarron.webp"
     },
     {
       "nombre": "Alebrijes",
       "descripcion": "Alebrije tallado en madera de Copal y pintado a mano por el artesano Oaxaqueño. Medidas de:  15 cm de alto por 9.5 cm de largo",
-      "imagen": "images/fingerprint_login.svg"
+      "imagen": "src/imagenes/fingerprint_login.svg"
 
     },
     {
@@ -20,7 +20,7 @@
     {
       "nombre": "Zapatos",
       "descripcion": "Esclava gruesa en tejido barbado con ornamentos en circonia incrustada.La esclava tiene una medida de 18cm de largo",
-      "imagen": "images/jaguar.jpeg"
+      "imagen": "src/imagenes/jaguar.jpeg"
     }
   ]
 }

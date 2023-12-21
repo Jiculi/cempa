@@ -1,19 +1,39 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import { Icon } from 'astro-icon'
+import BaseLayout from '../layouts/BaseLayout.astro'
 // components
 import Hero from '../components/landing/Hero.astro'
 import About from '../components/landing/About.astro'
 import Categorias from '../components/landing/Categorias.astro'
 import Productos from '../components/landing/Productos.astro'
 import More from '../components/landing/More.astro'
----
-<h1 class="text-4xl text-red-400">Cempa Market</h1>
 
-<Layout pageTitle='Bienvenidos a CEMPA' pageDescription='venta de artesanias en linea'>
+import fetchApi from '../../lib/strapi';
+import type Producto from '../interfaces/producto';
+
+const productos = await fetchApi<Producto[]>({
+  endpoint:  'productos',
+  wrappedByKey: 'data',
+});
+//console.log(productos)
+---
+
+<h1 class="text-2xl text-red-200">desde Strapi</h1>
+<ul>
+  {productos.map((producto) => (
+    <li>{producto.attributes.nombre}</li>
+  ))}
+</ul>
+
+<h1 class="text-4xl text-red-400">Cempa Market</h1>
+<BaseLayout pageTitle='Artesanías de corazón' pageDescription='venta de artesanias en linea'>
     <Hero />
+    <section class="programmer container  grid-sm">
+      <Icon name="logo" width="400px" class="programmer-icon" />
+    </section>
+    <Categorias />
+
     <More />
     <Productos />
     <About />
-    <Categorias />
-
-</Layout>
+</BaseLayout>

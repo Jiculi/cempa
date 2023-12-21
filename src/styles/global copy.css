@@ -275,7 +275,6 @@ li[role="none"],
   width: calc(var(--size-fluid-8) * 0.75);
 }
 
-
 @media (min-width: 900px) {
   .nav-wrapper {
     gap: var(--size-4);
