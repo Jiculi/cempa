@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon";
+import Button from "../Button.astro";
+import data from "../../datos/pricing.js";
+---
+
+<section class="pricing-wrapper">
+  <div class="grid-sm">
+    <h2 class="h2">Un precio para todos</h2>
+    <p class="text-muted">Elige el plan que mejor se adapte a tus necesidades</p>
+  </div>
+  <div class="pricing-container container-sm difuminar"> 
+    {
+      data.map(card =>(
+        <div class={`pricing-card ${card?.featured && 'featured'} grid-sm`}>
+          <div>
+            <p class="text-muted">{card.price}</p>
+            <h3 class="pricing-card-pill">card.plan</h3>
+          </div>
+          <p class="pricing-card-description text-muted">{card.description}</p>
+          <ul class="pricing-card-feature-container">
+            {
+              card.details.map(feature => (
+                <li class="pricing-card-feature">
+
+                    <Icon name="feather:check-circle" with ="24" class={` feather-icon ${card?.featured ? 'text-accent2' : 'text-text-alt' }`} />
+                    <span>{feature}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <Button text={card.button.text} link={card.button.url} style={card.button.style} />
+          <small class="text-muted">{card.subtext}</small>
+        </div>
+      ))
+    }
+  
+  </div>
+
+</section>

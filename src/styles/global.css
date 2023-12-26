@@ -209,12 +209,12 @@ small {
   transform: translateY(0);
 }
 
-.blur {
+.difuminar {
   position: relative;
 }
 
-.blur::after,
-.blur::before {
+.difuminar::after,
+.difuminar::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -224,19 +224,19 @@ small {
   background-color: hsl(var(--accent1) / .2);
 }
 
-.blur::after {
+.difuminar::after {
   background-color: hsl(var(--accent1) / .2);
   transform: rotate(-20deg);
 }
 
-.blur::before {
+.difuminar::before {
   background-color: hsl(var(--accent2) / .2);
   transform: rotate(20deg);
 }
 
 @media screen and (min-width: 768px) {
-  .blur::after,
-  .blur::before {
+  .difuminar::after,
+  .difuminar::before {
     filter: blur(120px);
   }
 }
@@ -325,7 +325,7 @@ header {
 .services {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;  /* de solo start vite error */
+  align-items: flex-start;  
   gap: var(--size-fluid-3);
 }
 
@@ -418,9 +418,9 @@ header {
 }
 
 .indicator-container {
-  position: absolute; /* tenia absolute -- quizas por eso no funciona el bottom */
+  position: absolute;
   left: 50%;
-  bottom: var(--size-5); /*por alguna razon no funciona*/
+  bottom: var(--size-5); 
   display: flex;
   justify-content: center;
   gap: var(--size-3);
@@ -524,6 +524,12 @@ header {
 .pricing-card-feature {
   display: flex;
   gap: var(--size-2);
+}
+
+/* FLLF*/
+.pricing-card-feature .feather-icon {
+  width: 24px;  /* Ajusta este valor según sea necesario */
+  height: 24px; /* Ajusta este valor según sea necesario */
 }
 
 /* CLIENTS */
