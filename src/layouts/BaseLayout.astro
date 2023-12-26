@@ -6,9 +6,9 @@ interface Props {
 import Navbar from '../components/Navbar.astro';
 const{pageTitle, pageDescription} = Astro.props;
 
+import '../styles/home.css'
 import '../styles/Layout.css'
 import '../styles/global.css'
-import '../styles/home.css'
 
 ---
 
@@ -25,15 +25,18 @@ import '../styles/home.css'
 	</head>
 
 	<body>
-    <Navbar></Navbar>
-    <main class="mx-auto container">
-      <slot />
-    </main>
+    <div class="wrapper">
+      <Navbar/>
+      
+      <main>
+        <slot />
+      </main>
 
-    <footer>
-      <small>Copyright <span id="copyrightYear"></span>  Cempa</small>
-    </footer>
-    
+      <footer class="blur">
+        <small>Copyright © <span id="copyrightYear"></span>  Cempa</small>
+      </footer>
+    </div>
+
     <script>
       document.querySelector('#copyrightYear').textContent = new Date().getFullYear().toString();
     </script>

@@ -17,7 +17,7 @@ svg {
 
 :root {
   /* Colors 
-  --bkg: 222 saturacion% brillo%;
+  hsl(hue, saturation, lightness)
   */
   --bkg: 222 47.4% 11.2%;
   --bkg-alt: 226 58.3% 18.8%;
@@ -59,11 +59,13 @@ body {
   min-height: 100vh;
 }
 
+
 main {
   display: grid;
   gap: var(--size-fluid-6);
   padding: var(--size-fluid-5) var(--size-fluid-2);
 }
+
 
 .container {
   width: 100%;
@@ -174,6 +176,8 @@ small {
 
 /* COMPONENTS */
 .btn {
+  font-size: var(--font-size-fluid-0);
+
   color: hsl(var(--white));
   text-decoration: none;
   padding: var(--size-2) var(--size-fluid-4);
@@ -217,6 +221,7 @@ small {
   z-index: -1;
   filter: blur(35px);
   border-radius: 50% 50% 50%;
+  background-color: hsl(var(--accent1) / .2);
 }
 
 .blur::after {
@@ -320,7 +325,7 @@ header {
 .services {
   display: flex;
   flex-wrap: wrap;
-  align-items: start;
+  align-items: flex-start;  /* de solo start vite error */
   gap: var(--size-fluid-3);
 }
 
@@ -344,7 +349,7 @@ header {
 /* REVIEWS */
 .reviews-wrapper {
   background-color: hsl(var(--bkg));
-  margin: 0 calc(var(--size-fluid-2) * -1);
+  /* margin: 0 calc(var(--size-fluid-2) * -1); */
 }
 
 .reviews-wrapper::after,
@@ -352,7 +357,7 @@ header {
   inset-inline: 20%;
 }
 
-.reviews-container {
+.review-container {
   overflow: hidden;
   position: relative;
   width: calc(100vw - var(--size-fluid-2));
@@ -413,9 +418,9 @@ header {
 }
 
 .indicator-container {
-  position: absolute;
+  position: absolute; /* tenia absolute -- quizas por eso no funciona el bottom */
   left: 50%;
-  bottom: var(--size-5);
+  bottom: var(--size-5); /*por alguna razon no funciona*/
   display: flex;
   justify-content: center;
   gap: var(--size-3);
@@ -423,7 +428,7 @@ header {
 }
 
 .indicator {
-  background: transparent;
+  background: transparent; 
   border: 0.15em solid hsl(var(--text-alt));
   border-radius: 50%;
   padding: 0.3rem;

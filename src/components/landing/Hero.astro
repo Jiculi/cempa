@@ -3,7 +3,9 @@ import { Image } from 'astro:assets';
 import locaImage from '../../imagenes/fingerprint_login.svg'
 import Button from '../Button.astro';
 ---
+
 <header class="grid-lg">
+  <!-- open props -->
   <div class="grid-sm">
     <h3 class="h3">Artesanos 100% artesanos</h3>
     <h1 class="h1">Una historia detrás de cada compra</h1>
@@ -12,13 +14,23 @@ import Button from '../Button.astro';
     <Button text="Compra ahora" link="#" style="btn btn--secondary"/>
   </div>
 
-  <div>
-    <h1 class="text-5xl font-bold">Una historia detrás de cada compra</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, impedit.</p>
-    <button class="bg-indigo-500 px-3 py-2 hover:bg-indigo-400">Compra ahora</button>
+  <!--  tailwind -->
+  <div class="flex flex-row">
+    <div class="basis-1/2">
+      <div class="flex flex-col  bg-zinc-900  p-20 gap-3">
+        <h1 class="text-base font-bold">Artesanos 100% artesanos</h1>
+        <p>Una historia detrás de cada compra</p>
+        <button class="text-base bg-indigo-500 px-4 py-2 hover:bg-indigo-400 rounded-full" >Compra ahora</button>
+      </div>
+    </div>
+    <div class="basis-1/2">
+      <img src="../../src/imagenes/jorongo.png" alt="" class="w-80 h-80">
+    </div>
   </div>
 
-  <img src="../../src/imagenes/fingerprint_login.svg" alt="" class="w-80">
+
+
+
 
 </header>
 

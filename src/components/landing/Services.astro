@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon";
+import data from "../../datos/services.json";
+---
+
+
+<section class="services container-sm">
+  <h2 class="sr-only">Servicios</h2>
+  {
+    data.map(service => (
+      <article class="service">
+        <div class="service--icon text-white">
+          <Icon name={service.icon} width="30"/>
+        </div>
+        <h3>{service.name}</h3>
+        <p class="text-muted">{service.content}</p>
+      </article>
+    ))
+  }
+
+</section>

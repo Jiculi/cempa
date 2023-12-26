@@ -3,6 +3,8 @@ import { Icon } from 'astro-icon'
 import BaseLayout from '../layouts/BaseLayout.astro'
 // components
 import Hero from '../components/landing/Hero.astro'
+import Services from '../components/landing/Services.astro'
+import Reviews from '../components/landing/Reviews.astro'
 import About from '../components/landing/About.astro'
 import Categorias from '../components/landing/Categorias.astro'
 import Productos from '../components/landing/Productos.astro'
@@ -28,9 +30,12 @@ const productos = await fetchApi<Producto[]>({
 <h1 class="text-4xl text-red-400">Cempa Market</h1>
 <BaseLayout pageTitle='Artesanías de corazón' pageDescription='venta de artesanias en linea'>
     <Hero />
-    <section class="programmer container  grid-sm">
-      <Icon name="logo" width="400px" class="programmer-icon" />
+    <section class="programmer container blur  grid-sm">
+      <Icon name="logo" width="400px" class="programmer-icon" alt="Picture" aria-hidden="true"/>
     </section>
+
+    <Services />
+    <Reviews />
     <Categorias />
 
     <More />
